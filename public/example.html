@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TaskMaster - My Lists</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --brand-primary: #3d98f4;
+            --brand-primary-light: #e8f3fe;
+            --brand-primary-dark: #2a74c4;
+            --neutral-900: #111827;
+            --neutral-700: #374151;
+            --neutral-500: #6b7280;
+            --neutral-300: #d1d5db;
+            --neutral-200: #e5e7eb;
+            --neutral-100: #f3f4f6;
+            --neutral-50: #f9fafb;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .category-card:hover .category-image {
+            transform: scale(1.05);
+        }
+        .category-card:hover .category-title {
+            color: var(--brand-primary);
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--neutral-50)] text-[var(--neutral-900)]">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 z-10 bg-white/80 backdrop-blur-md shadow-sm">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-3">
+                        <div class="text-[var(--brand-primary)]">
+                            <svg class="feather feather-check-square" fill="none" height="28" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                width="28" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="9 11 12 14 22 4"></polyline>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xl font-bold tracking-tight">TaskMaster</h1>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="flex items-center justify-center gap-2 h-10 px-4 rounded-md bg-[var(--brand-primary)] text-white font-semibold text-sm hover:bg-[var(--brand-primary-dark)] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z">
+                                </path>
+                            </svg>
+                            <span>New List</span>
+                        </button>
+                        <div class="h-10 w-10 rounded-full bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLjmMkLNQd9ajlIx44uq49KVg_sldBgBXrdPd6fpoyShlK6lTU4cECqcnypk9W_1jZa6O2pqWVkjvcJltQx_38qvH9lOqx0OxCDGlVDuEtxeiziAXljDWHj0PhNVPdiS6t__rWMnAaGp1-lkTiDu1woviteRii6DVsklSioKkn3FCUU1OMNBeMvdtffGAuHCYNt8HOGkLf_ju3Qa_zf96RAMmN1vReBc0_nVF-xXzOYczCLVEgtprYha264Cdwuu2kZtFMuXX6oCyS");'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <div class="max-w-5xl mx-auto">
+                <header class="mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-[var(--neutral-900)]">My Lists</h2>
+                    <p class="mt-2 text-lg text-[var(--neutral-500)]">Organize your tasks into categories for a
+                        clutter-free workflow.</p>
+                </header>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <a class="group category-card block rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white"
+                        href="#">
+                        <div class="overflow-hidden">
+                            <div class="w-full aspect-square bg-cover bg-center category-image transition-transform duration-300"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLsN_DAGCdYsNBkAdiYzNVNNZJS9aoZmWsQM_cPPml7RizvyqWhaqLbUk3Xw81NueD3nFnRN7lzdAn4UWaHMGWcHkLPsUK1AY4hVo6ZQ45OncU093JfXLnZ06LdDneeXbhwEUNthwZQYXNLwULr5_6F2vKP5FiDG9pmlBqjd8z5s005JRpySBNiaG5Lm4BSw5lvcPSh02ypOR103vszjiKmjuNb1bssfLtE3rGxZYftKc_28yZLb3mXhEOs2A8dnQ7LQeC8bcKWIjC");'>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="font-semibold text-lg text-[var(--neutral-700)] category-title transition-colors duration-300">
+                                Work</h3>
+                            <p class="text-sm text-[var(--neutral-500)] mt-1">12 tasks</p>
+                        </div>
+                    </a>
+                    <a class="group category-card block rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white"
+                        href="#">
+                        <div class="overflow-hidden">
+                            <div class="w-full aspect-square bg-cover bg-center category-image transition-transform duration-300"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqgtaagM0zIixojynZJR8QOZ0kM75IIYU36dvIs_S5wdioLjTmd2EKSJ-Yl6FohI6d5VBYa9KPC8rPPHQpAkAYBEsUX5a5rXBdKVW4MTATOp6Hts3FC8lCZh35hPzPOT5dk1JkKE4G3g0pIDmu84h0MXp8n_ADNPdOnEeqeZxeV0JuUjrtGQ9_Ba1z5TiFAkKu1x2uVqv1G8RY2YIKlk7BGdDeBSq44bbUtHkLUkrIy3nn8m-tn8C0bvNSylrL7NZKxiLyYDaI6bf7");'>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="font-semibold text-lg text-[var(--neutral-700)] category-title transition-colors duration-300">
+                                Personal</h3>
+                            <p class="text-sm text-[var(--neutral-500)] mt-1">5 tasks</p>
+                        </div>
+                    </a>
+                    <a class="group category-card block rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white"
+                        href="#">
+                        <div class="overflow-hidden">
+                            <div class="w-full aspect-square bg-cover bg-center category-image transition-transform duration-300"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANm8tCsbdnzmv__9hM-Z6dDU8j2kI-u9v9JlV7RmdPR0ip2jLcGkWebXkM8L1grsfUEY9gr8a_0v1aUlCC_NaTbyW3DnV70pY97RLaHCGlHyvGSd7KtVxvmxSmqdda3vw6IPFzJXYjuLDoYRJdwmXcBp4mOnunEgUNN4p-C--nupzW9Oe5RLT9ZUcQzQxY04w16LMheCEbUbuips_bgHkLPGi_Yi59KnosLHpVSz6pAb858xRZYtFa3IU8dNdqY3t-WB6J6vPhKw9c");'>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="font-semibold text-lg text-[var(--neutral-700)] category-title transition-colors duration-300">
+                                Shopping</h3>
+                            <p class="text-sm text-[var(--neutral-500)] mt-1">8 items</p>
+                        </div>
+                    </a>
+                    <a class="group category-card block rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white"
+                        href="#">
+                        <div class="overflow-hidden">
+                            <div class="w-full aspect-square bg-cover bg-center category-image transition-transform duration-300"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdPJpyc0coPTvVW4lE8Eo25fBq-SWcuB_ucfepUWUvlXC1G7ImRqv_8PmC-mJf0_MfzYBo1cQ51ahp4LMgp516OgePCEl1fj56r1aoH9U0RsJJUMF9c_Q59-XdoSpTF1H2m63dw1ggNCr1OzHKR3cq0tcSKk5DuDFhet1jLh4TIW2wgAXm5Uiq6HQEcmLkTyuWARjQJb6hBkyaV3dJ0fUXWX63KGvvTE8XIT_it5VH12SHK0zhBNxIpu_5tBXQl3i7msi5k28TP3W8");'>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="font-semibold text-lg text-[var(--neutral-700)] category-title transition-colors duration-300">
+                                Travel</h3>
+                            <p class="text-sm text-[var(--neutral-500)] mt-1">2 checklists</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

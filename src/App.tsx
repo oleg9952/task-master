@@ -1,7 +1,11 @@
 import { Router } from "./pages";
 
 function App() {
-  return <Router />;
+  return (
+    <div className="dark bg-background">
+      <Router />
+    </div>
+  );
 }
 
 export default App;
