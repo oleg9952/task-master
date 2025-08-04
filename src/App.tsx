@@ -2,7 +2,7 @@ import { Router } from "./pages";
 
 function App() {
   return (
-    <div className="dark bg-background">
+    <div className="dark">
       <Router />
     </div>
   );
