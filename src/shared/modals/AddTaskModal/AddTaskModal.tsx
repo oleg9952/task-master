@@ -2,19 +2,10 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { Text } from "../../components/Text";
 import { TiPlus } from "react-icons/ti";
 
-const AddCategoryModal = () => {
+const AddTaskModal = () => {
   return (
     <div>
       <form className="flex flex-col gap-5">
-        <label>
-          <Text className="dark:text-[#c4c9d0] pb-2">Category name</Text>
-          <input
-            type="text"
-            name="categoryName"
-            placeholder="Groceries"
-            className="dark:placeholder:text-gray-700 dark:bg-[#101827] px-2 py-1 rounded-lg border-1 border-[#404853] text-subcontent w-full focus:outline-none focus:ring-1 focus:ring-blue-400"
-          />
-        </label>
         <section>
           <Text className="pb-1">Tasks</Text>
           <div className="flex flex-col gap-2 pb-3">
@@ -57,7 +48,7 @@ const AddCategoryModal = () => {
             type="submit"
             className="bg-button-primary hover:bg-[#85bcf4] text-[#d1d5db] px-5 py-1.5 rounded-lg cursor-pointer"
           >
-            Create Category
+            Submit
           </button>
         </div>
       </form>
@@ -65,4 +56,4 @@ const AddCategoryModal = () => {
   );
 };
 
-export default AddCategoryModal;
+export default AddTaskModal;

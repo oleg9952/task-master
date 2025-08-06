@@ -47,7 +47,7 @@ const PrimaryLayout = () => {
       <main className="grow bg-background p-2.5">
         <Outlet />
       </main>
-      {/* <BaseModal /> */}
+      <BaseModal />
     </div>
   );
 };

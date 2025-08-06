@@ -1,6 +1,7 @@
 import { IoMdCloseCircle } from "react-icons/io";
 import { AddCategoryModal } from "../AddCategoryModal";
 import { Text } from "../../components/Text";
+import { AddTaskModal } from "../AddTaskModal";
 
 const BaseModal = () => {
   return (
@@ -13,17 +14,18 @@ const BaseModal = () => {
               <Text variant="h1" className="font-bold text-xl">
                 Title
               </Text>
-              <IoMdCloseCircle
-                size={30}
-                role="button"
-                tabIndex={0}
-                className="cursor-pointer dark:text-white hover:text-gray-500 dark:hover:text-gray-500 transition-all duration-200"
-              />
+              <button>
+                <IoMdCloseCircle
+                  size={30}
+                  className="cursor-pointer dark:text-white hover:text-gray-500 dark:hover:text-gray-500 transition-all duration-200"
+                />
+              </button>
             </div>
             <div className="bg-gray-300 w-full h-[1px] my-2" />
           </div>
           <div>
-            <AddCategoryModal />
+            {/* <AddCategoryModal /> */}
+            <AddTaskModal />
           </div>
         </div>
       </div>
